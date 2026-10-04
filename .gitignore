@@ -1,0 +1,27 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+secrets/
+
+# Personal data and generated run artifacts
+data/
+logs/
+*.log
+*.usage.json
+.checkpoints/
+.hermes/
+mcp-tokens/
+auth.json
+state.db
+sessions/
+
+# JavaScript / TypeScript dependencies and builds
+node_modules/
+dist/
+coverage/
+
+# Operating-system and editor files
+.DS_Store
+.idea/
+.vscode/
