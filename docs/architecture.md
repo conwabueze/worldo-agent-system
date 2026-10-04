@@ -30,3 +30,16 @@ This repository contains reusable source and placeholders. The live Hermes
 runtime holds the actual profile configuration, OAuth tokens, chat credentials,
 Notion identifiers, preferences, records, and sessions. Do not merge those
 runtime files into this repository.
+
+## Repository layout
+
+`profiles/` holds the installable source packages. Each profile has a
+`distribution.yaml` manifest, its SOUL, and its own skills. `shared/` holds
+cross-profile policies and schemas. `integrations/`, `evals/`, and `deploy/`
+will hold reusable connection, testing, and deployment guidance as Worldo
+grows.
+
+The Worldo repository is the source of truth. `~/.hermes/profiles/` is the
+private runtime: it is where Hermes runs installed profiles and keeps secrets,
+OAuth state, memory, and sessions. Keeping those roles separate means one
+repository can support many profiles without publishing personal information.

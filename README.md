@@ -1,6 +1,7 @@
-# Personal Agent System with Hermes
+# Worldo
 
-A build-in-public blueprint for a modular personal-agent system running on
+I’m building Worldo: a personal system of AI agents that helps me find,
+organize, and follow through on the things I care about. It runs on
 [Hermes Agent](https://github.com/NousResearch/hermes-agent).
 
 The first implemented specialist is an Activity Scout. It researches
@@ -19,7 +20,7 @@ other parts of life without sharing private credentials or memory by default.
     Optional future calendar workflow with separate approval
 
 See [architecture](docs/architecture.md), the
-[Activity Scout package](agents/activity-scout/README.md), and the
+[Activity Scout profile package](profiles/activity-scout/README.md), and the
 [local installation notes](deploy/local-install.md).
 
 ## What this repository intentionally excludes
@@ -32,4 +33,5 @@ records, session history, personal preference data, logs, and backups.
 
 The Activity Scout is the first working profile. It supports Notion retrieval
 and explicit activity-record decisions; it does not create calendar events,
-purchase tickets, make reservations, or contact anyone.
+purchase tickets, make reservations, or contact anyone. Restaurant Scout and
+a Concierge/router are planned next.
