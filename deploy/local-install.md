@@ -1,31 +1,39 @@
 # Local development and testing
 
 This repository is public-safe source, not a ready-to-run personal deployment.
-Use a disposable Hermes profile for changes before applying them to a live
-profile.
+A profile distribution can be installed directly as the profile you use every
+day; a separate sandbox is optional, not required.
 
-From the repository root, install the Activity Scout package from the local
-source directory:
+From the repository root, install a package under its private runtime name:
 
 ```sh
-hermes profile install "$(pwd)/profiles/activity-scout" --name activity-scout-sandbox --alias
+hermes profile install "$(pwd)/profiles/restaurant-scout" --name restaurantscoutdev --alias
 ```
 
-Hermes copies the distribution-owned files into the sandbox runtime profile.
-Then configure the sandbox locally: choose its model, complete any OAuth flow,
-and add its credentials through the profile's ignored runtime configuration.
-Never commit those values.
+Later, update that profile from the Worldo source with:
 
-Recommended loop:
+```sh
+hermes profile update restaurantscoutdev -y
+```
 
-1. Edit Worldo source under `profiles/activity-scout/`.
-2. Reinstall or update the disposable `activity-scout-sandbox` profile.
-3. Test basic research in the CLI/TUI first.
-4. Test Notion reads, then one explicit, reversible test write.
-5. Review the result and only then apply the same vetted source to the live
-   profile.
+Hermes replaces only the files declared distribution-owned by the package. It
+preserves private runtime state such as `.env`, OAuth, sessions, memories, and
+local configuration. Add real values through the ignored runtime profile;
+never commit them.
 
-Do not force-install over a live profile until its runtime state is backed up
-and you have reviewed which files the distribution owns. Before a VPS
-deployment, replace local paths with deployment paths and use a secret manager
-or protected environment file.
+Recommended direct workflow:
+
+1. Edit the relevant source under `profiles/<specialist>/`.
+2. Review the diff, commit, and push it.
+3. Run `hermes profile update <live-profile-name> -y`.
+4. Test one focused behavior in the profile's normal chat surface.
+5. Revert the source commit or make a focused follow-up change if the behavior
+   is not correct.
+
+For a profile that already has private values embedded in a source-owned file,
+first move those values into a private configuration layer before installing it
+as a distribution. This is why the existing Activity Scout is not yet updated
+directly from the public package.
+
+Before a VPS deployment, replace local paths with deployment paths and use a
+secret manager or protected environment file.

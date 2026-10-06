@@ -14,8 +14,12 @@ Included:
 The public package intentionally contains no live Notion URLs, OAuth tokens,
 Discord configuration, preference data, or user feedback.
 
-For local development, install this directory into a disposable profile:
+For direct local development, install this directory into a named private
+runtime profile:
 
 ```sh
-hermes profile install "/absolute/path/to/worldo-agent-system/profiles/activity-scout" --name activity-scout-sandbox --alias
+hermes profile install "/absolute/path/to/worldo-agent-system/profiles/activity-scout" --name activityscoutdev --alias
 ```
+
+Only do this after the live profile's private configuration has been moved out
+of source-owned files.

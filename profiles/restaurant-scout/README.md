@@ -16,8 +16,8 @@ Before it becomes a live agent, Restaurant Scout needs its own preferences,
 output contract, evaluation cases, Restaurant Planner database, minimum
 Notion tool allowlist, and Discord/channel decision.
 
-For safe local development, install it as a disposable sandbox:
+For direct local development, install it as a named private runtime profile:
 
 ```sh
-hermes profile install "/absolute/path/to/worldo-agent-system/profiles/restaurant-scout" --name restaurant-scout-sandbox --alias
+hermes profile install "/absolute/path/to/worldo-agent-system/profiles/restaurant-scout" --name restaurantscoutdev --alias
 ```
