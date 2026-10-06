@@ -12,6 +12,9 @@ Included:
 - `restaurant-research`: research and ranking procedure
 - `restaurant-planning`: explicit decision-to-database procedure
 
+The intended Restaurant Planner fields and views are documented in
+[`shared/restaurant-planner-schema.md`](../../shared/restaurant-planner-schema.md).
+
 Before it becomes a live agent, Restaurant Scout needs its own preferences,
 output contract, evaluation cases, Restaurant Planner database, minimum
 Notion tool allowlist, and Discord/channel decision.

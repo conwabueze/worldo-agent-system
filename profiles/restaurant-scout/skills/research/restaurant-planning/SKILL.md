@@ -22,9 +22,10 @@ The request must identify one restaurant unambiguously. State the intended
 status change before the write and return the resulting record link afterward.
 
 Map only verified properties supported by the destination database: restaurant
-name, location, links, cuisine, price guidance, scout fit and confidence,
-decision reason, and visit feedback. A Planned record gets a reservation or
-calendar status of Not requested when that property exists.
+name, location, links, cuisine/categories, price guidance, social context,
+planning effort, scout fit and confidence, decision reason, and visit
+feedback. A Planned record gets Reservation status `Not requested` when that
+property exists.
 
 Never make or modify a reservation, join a waitlist, contact a venue, create a
 calendar event, modify the preference source, change a database schema, or
