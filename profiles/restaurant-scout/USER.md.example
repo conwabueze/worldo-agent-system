@@ -1,0 +1,13 @@
+# Private Restaurant Scout context
+
+This file is a local private overlay. Copy it to `USER.md` in the installed
+Hermes runtime profile, replace the placeholders there, and never commit the
+real file or its values to Git.
+
+- Canonical Personal Interests Notion page:
+  `<PERSONAL_INTERESTS_NOTION_PAGE_URL>`
+- Canonical Restaurant Planner Notion database:
+  `<RESTAURANT_PLANNER_DATABASE_URL>`
+
+Only these named locations are authorized for Restaurant Scout's preference
+reads and explicit restaurant-planning writes.

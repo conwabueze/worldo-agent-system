@@ -2,6 +2,7 @@
 .env
 .env.*
 !.env.example
+profiles/*/USER.md
 secrets/
 
 # Personal data and generated run artifacts
