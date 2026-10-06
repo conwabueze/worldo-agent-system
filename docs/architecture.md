@@ -12,7 +12,7 @@ router, but specialists remain independently scoped.
 | Profile | Responsibility | Status |
 | --- | --- | --- |
 | Activity Scout | Research activities and record explicit decisions | Working |
-| Restaurant Scout | Research restaurants and record explicit decisions | Planned |
+| Restaurant Scout | Research restaurants and record explicit decisions | Starter package ready |
 | Concierge | Route natural-language requests to specialists | Planned |
 
 ## Data and authority boundaries

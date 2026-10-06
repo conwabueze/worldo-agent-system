@@ -1,0 +1,12 @@
+name: restaurant-scout
+version: 0.1.0
+description: A scoped restaurant-research and planning specialist for Worldo.
+hermes_requires: ">=0.20.0"
+author: conwabueze
+
+# Hermes replaces only these source-owned files on update. Runtime secrets,
+# OAuth state, sessions, memories, and local configuration stay private.
+distribution_owned:
+  - SOUL.md
+  - skills/research/restaurant-research/
+  - skills/research/restaurant-planning/
